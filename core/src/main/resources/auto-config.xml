@@ -19,10 +19,11 @@ http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
 	<!-- ===================================================================================================== -->
 		<!-- 생성자를 이용해서 hotel2 만들어보기 -->
-	<bean id="hotel2" class="core.chap3.Hotel" />			
+	<bean id="hotel2" class="core.chap3.Hotel2" />			
 	<bean id="western" class="core.chap3.WesternRestaurant" />
-	<bean id="frenchChef" class="core.chap3.FrenchChef"/>
 	<bean id="frenchCourse" class="core.chap3.FrenchCourse"/>
+	<bean id="frenchChef" class="core.chap3.FrenchChef"/>
+	
 
 
 

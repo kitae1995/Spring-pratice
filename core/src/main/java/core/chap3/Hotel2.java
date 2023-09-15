@@ -3,7 +3,7 @@ package core.chap3;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-public class Hotel {
+public class Hotel2 {
 	
 	//제어의 역전(IoC) : 객체 생성의 제어권을 외부로 넘긴다.
 	//의존성 주입(DI) : 외부에서 생성된 객체를 주입받는 개념.
@@ -16,10 +16,10 @@ public class Hotel {
 	private Chef headChef;
 	
 	//기본 생성자
-	public Hotel() {}
+	public Hotel2() {}
 
 	// 생성자 주입
-	public Hotel(Restaurant restaurant, Chef headChef) {
+	public Hotel2(Restaurant restaurant, Chef headChef) {
 		super();
 		this.restaurant = restaurant;
 		this.headChef = headChef;
@@ -41,14 +41,14 @@ public class Hotel {
 	
 	//setter 주입
 	@Autowired
-	@Qualifier("asianChef")
+	@Qualifier("frenchChef")
 	public void setHeadChef(Chef headChef) {
 		this.headChef = headChef;
 	}
 	
 	//setter 주입
 	@Autowired
-	@Qualifier("asianRes")
+	@Qualifier("western")
 	public void setRestaurant(Restaurant restaurant) {
 		this.restaurant = restaurant;
 	}
